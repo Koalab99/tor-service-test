@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  tor:
+    build: .
+    environment:
+    - ONION_WHOAMI_443=whoami:80
+  whoami:
+    image: "containous/whoami"
